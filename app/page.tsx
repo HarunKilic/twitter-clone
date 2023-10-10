@@ -8,10 +8,14 @@ import Tweets from "@/app/tweets";
 
 import { Account } from 'appwrite';
 import { getAccount } from './page-data';
+import { pb } from './pocketbase-client';
 
 export const dynamic = "force-dynamic";
 export default async function Home() {
-  const account = await getAccount();
+  // const account = await getAccount();
+  const account = pb.authStore.model;
+  console.log(account);
+
   // const supabase = createServerComponentClient<Database>({cookies})
   // const { data: { session } } = await supabase.auth.getSession()
   // const { data } = await supabase.from('tweets').select('*, author: profiles(*), likes(*)').order('created_at', { ascending: false })
@@ -23,15 +27,15 @@ export default async function Home() {
   //   likes: tweet.likes.length
   // })) ?? [];
 
-  return (
-    <div className="w-full max-w-xl mx-auto">
-      <div className="flex justify-between px-4 py-6 border border-gray-800 border-t-0">
-        <h1 className="text-xl font-bold">Home</h1>
-        <AuthButtonServer />
-      </div>
-      <NewTweet user={account} />
-      {/*
-<Tweets tweets={tweets} /> */}
-    </div>
-  )
+  //   return (
+  //     <div className="w-full max-w-xl mx-auto">
+  //       <div className="flex justify-between px-4 py-6 border border-gray-800 border-t-0">
+  //         <h1 className="text-xl font-bold">Home</h1>
+  //         <AuthButtonServer />
+  //       </div>
+  //       <NewTweet user={account} />
+  //       {/*
+  // <Tweets tweets={tweets} /> */}
+  //     </div>
+  //   )
 }

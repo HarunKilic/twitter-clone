@@ -1,7 +1,6 @@
 import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { NextResponse, type NextRequest } from "next/server";
-import { appwriteClient } from "../../appwrite-client";
 import { Account } from "appwrite";
 
 export const dynamic = "force-dynamic";

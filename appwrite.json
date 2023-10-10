@@ -1,0 +1,21 @@
+{
+    "projectId": "64eff94e10a47120e724",
+    "projectName": "Twitter Clone",
+    "functions": [
+        {
+            "$id": "64eff9b9f2c62a9a414f",
+            "name": "My Awesome Function",
+            "runtime": "node-18.0",
+            "path": "functions/My Awesome Function",
+            "entrypoint": "src/index.js",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        }
+    ]
+}
